@@ -7,7 +7,7 @@ export DEVPI_CLIENTDIR=/tmp/devpi-client
 
 devpi-server --start --host 0.0.0.0 --port 3141
 if [[ "X$initialize" = "Xyes" ]]; then
-  devpi use http://localhost:3141
+  devpi use http://0.0.0.0:3141
   devpi login root --password=''
   devpi user -m root password="${DEVPI_PASSWORD}"
   devpi index -y -c public pypi_whitelist='*'

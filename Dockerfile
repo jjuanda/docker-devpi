@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:latest
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update -q && apt-get install -y netbase python
 ADD https://raw.github.com/pypa/pip/master/contrib/get-pip.py /get-pip.py    
